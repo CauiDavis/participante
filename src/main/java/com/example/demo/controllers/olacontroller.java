@@ -29,7 +29,7 @@ public class olacontroller {
         
         listap = pr.findAll();
 
-        ModelAndView mv = new ModelAndView("/participante");
+        ModelAndView mv = new ModelAndView("participante");
         mv.addObject("listap",listap);
         return mv;
     }
