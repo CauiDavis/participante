@@ -47,7 +47,7 @@ public class olacontroller {
     public ModelAndView detalhes(@PathVariable Long id){
         Optional<Teste> teste = pr.findById(id);
         if(teste.isPresent()){
-            ModelAndView mv = new ModelAndView("/detalhes");
+            ModelAndView mv = new ModelAndView("detalhes");
             mv.addObject("detalhe",teste.get());
             return mv;
         }
@@ -64,7 +64,7 @@ public class olacontroller {
     public ModelAndView editar(@PathVariable Long id){
         Optional<Teste> teste = pr.findById(id);
         if(teste.isPresent()){
-            ModelAndView mv = new ModelAndView("/editar");
+            ModelAndView mv = new ModelAndView("editar");
             mv.addObject("teste",teste.get());
             return mv;
         }
