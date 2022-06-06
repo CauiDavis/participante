@@ -23,7 +23,7 @@ public class olacontroller {
         return "index";
     }
 
-    @GetMapping("participante")
+    @GetMapping("/participante")
     public ModelAndView participantes(){
         List<Teste> listap = new ArrayList<>();
         
@@ -33,17 +33,17 @@ public class olacontroller {
         mv.addObject("listap",listap);
         return mv;
     }
-    @GetMapping("novo")
+    @GetMapping("/novo")
     public String novo(){
         return "novo";
     }
-    @PostMapping("cadastro")
+    @PostMapping("/cadastro")
     public String cadastro(Teste teste){
         pr.save(teste);
         return "redirect:/participante";
 
     }
-    @GetMapping("detalhes/{id}")
+    @GetMapping("/detalhes/{id}")
     public ModelAndView detalhes(@PathVariable Long id){
         Optional<Teste> teste = pr.findById(id);
         if(teste.isPresent()){
@@ -52,13 +52,13 @@ public class olacontroller {
             return mv;
         }
         else{
-            return new ModelAndView("redirect:participante");
+            return new ModelAndView("redirect:/participante");
         }
     }
     @GetMapping("/deletar/{id}")
     public String deletar(@PathVariable Long id){
         pr.deleteById(id);
-        return "redirect:participante";
+        return "redirect:/participante";
     }
     @GetMapping("/{id}/editar")
     public ModelAndView editar(@PathVariable Long id){
@@ -69,12 +69,12 @@ public class olacontroller {
             return mv;
         }
         else{
-            return new ModelAndView("redirect:participante");
+            return new ModelAndView("redirect:/participante");
         }
     }
     @PostMapping("/edita")
     public String editarparticipante(Teste teste){
         pr.save(teste);
-        return "redirect:participante";
+        return "redirect:/participante";
     }
 }
