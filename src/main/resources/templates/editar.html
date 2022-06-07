@@ -30,7 +30,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href=""><i class="fa-solid fa-pencil mr-2"></i>Editar cadastro</a>
         <a class="navbar-brand" href="/"><i class="fa-solid fa-arrow-left mr-2"></i>Voltar</a></nav>
-        <center><form th:object= ${teste} class="formulario bg-warning text-dark" action="/edita" method="post">
+        <center><form th:object= ${teste} class="form-group mx-5 my-5 bg-warning text-dark shadow-lg p-3 border border-dark" action="/edita" method="post">
           <input type="hidden" th:field=*{id}>
             <div class="form-group">
               <label for="exampleInputEmail1">Seu nome(pode ser completo)</label>

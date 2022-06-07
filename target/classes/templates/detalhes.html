@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="pt br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body style="background-color: bisque;">
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href=""><i class="fa-solid fa-circle-info mr-2"></i>Detalhes do participante</a>
+        <a class="navbar-brand" href="/"><i class="fa-solid fa-arrow-left mr-2"></i>Voltar</a></nav>
+      <center><div class="card mt-5" style="width: 28rem;height: 30rem;">
+                <center class="bg-secondary text-white"><img class="card-img-top mt-3 " style="height: 200px;width: 300px;border-radius:50%;" th:src="${detalhe.banner}" alt="Imagem de capa do card"></center>
+                <div class="card-body">
+                  <ul class="bg-light text-dark">
+                      <li style="text-align: left;">Nome:<span th:text="${detalhe.nome}"></span></li>
+                  </ul>
+                  <center ><a href="/participante" class="btn btn-primary" >Voltar para a lista<i class="fa-solid fa-arrow-left ml-2"></i></a></center>
+                </div>
+              </div></center>
+</body>
+</html>
