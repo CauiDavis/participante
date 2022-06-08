@@ -14,14 +14,14 @@ public class Teste{
     private Long id;
     @Column(nullable = false)
     private String nome;
-    private StringBuffer banner;
+    private String banner;
     public  Teste(){
     }
-    public Teste(String nome,StringBuffer banner){
+    public Teste(String nome,String banner){
         this.nome = nome;
         this.banner = banner;
     }
-    public Teste(Long id,String nome,StringBuffer banner){
+    public Teste(Long id,String nome,String banner){
         this.nome = nome;
         this.banner = banner;
     }
@@ -32,7 +32,7 @@ public class Teste{
     public void setNome(String nome){
         this.nome = nome;
     }
-    public void setBanner(StringBuffer banner){
+    public void setBanner(String banner){
         this.banner = banner;
     }
     public Long getId(){
@@ -41,7 +41,7 @@ public class Teste{
     public String getNome(){
         return nome;
     }
-    public StringBuffer getBanner(){
+    public String getBanner(){
         return banner;
     }
 }
