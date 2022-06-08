@@ -69,12 +69,12 @@ public class olacontroller {
             return mv;
         }
         else{
-            return new ModelAndView("redirect:participante");
+            return new ModelAndView("redirect:/participante");
         }
     }
     @PostMapping("edita")
     public String editarparticipante(Teste teste){
         pr.save(teste);
-        return "redirect:participante";
+        return "redirect:/participante";
     }
 }
