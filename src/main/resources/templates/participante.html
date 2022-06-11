@@ -25,9 +25,8 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" href=""><i class="fa-solid fa-users mr-2"></i>Participantes do site</a>
         <a class="navbar-brand" href="/"><i class="fa-solid fa-arrow-left mr-2"></i>Voltar</a></nav>
-<section class = "conteiner">
-
-      <a class="btn btn-primary" href="/novo" role="button">Cadastrar<i class="fa-solid fa-user ml-2"></i></a>
+        <center><a class="btn btn-primary mt-1" href="/novo" role="button">Cadastrar<i class="fa-solid fa-user ml-2"></i></a></center>
+<section class = "conteiner card mx-5 my-2 py-5 py-5 border border-dark" style="background-color: #161b22;">
         <table class="table">
             <thead class ="border border-white">
               <tr class="table-dark">
@@ -36,7 +35,7 @@
                 <th></th>
               </tr>
             </thead>
-
+            
             <tbody class ="border border-white">
               <tr class="table-info" th:each="parti: ${listap}">
                 <th scope="row" th:text="${parti.id}"></th>
